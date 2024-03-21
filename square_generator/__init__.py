@@ -1,11 +1,7 @@
-import math
+from abc import ABC, abstractmethod
 
 
-class SquareGenerator:
-    @staticmethod
-    def generate_squares(first, last):
-        if last < first:
-            first, last = last, first
-            print("first was > then second so switched")
-        squares = [(x, math.sqrt(x)) for x in range(first, last + 1)]
-        return squares
+class SquareGenerator(ABC):
+    @abstractmethod
+    def generate_squares(self, first, last):
+        pass
