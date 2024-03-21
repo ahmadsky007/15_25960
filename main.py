@@ -1,7 +1,11 @@
+import math
+
+
 class SquareGenerator:
     @staticmethod
-    def generate_squares(start, end):
-        return [x ** 2 for x in range(start, end + 1)]
+    def generate_squares(first, last):
+        squares = [(x, math.sqrt(x)) for x in range(first, last + 1)]
+        return squares
 
 
 if __name__ == "__main__":
